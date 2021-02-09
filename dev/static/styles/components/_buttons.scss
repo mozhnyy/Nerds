@@ -1,0 +1,18 @@
+/* ==============================
+BUTTON STYLES
+ ================================ */
+
+.btn {
+	display: inline-block;
+
+	cursor: pointer;
+	text-decoration: none;
+
+	outline: none;
+
+	&:hover,
+	&:focus {
+	}
+	&:active {
+	}
+}
