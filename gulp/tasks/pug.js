@@ -1,11 +1,15 @@
-const plumber = require("gulp-plumber"),
-	pug = require("gulp-pug"),
-	cached = require("gulp-cached");
+// 👉 Variables
+const plumber = require("gulp-plumber");
+const pug = require("gulp-pug");
+const cached = require("gulp-cached");
 
+/* ==============================
+ 👉 PUG
+ ================================ */
 module.exports = function () {
 	$.gulp.task("pug", () => {
 		return $.gulp
-			.src("./dev/pug/*.pug")
+			.src("./source/pug/*.pug")
 			.pipe(plumber())
 			.pipe(
 				pug({

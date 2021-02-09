@@ -2,19 +2,44 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>🎉 App Name</title><!--[if IE]>
+    <title>Nerds</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;display=swap">
-    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="img/png" href="images/favicon.png">
   </head>
   <body>
-    <header class="header"></header>
-    <main>
-      <h1>Hello World! 🥳</h1>
+    <header class="header">
+      <div class="header-inner container">
+        <nav class="nav"><a class="logo" href="#"><img src="images/Header/nerds-logo.svg" alt="Nerds"></a>
+          <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="">Студия</a></li>
+            <li class="menu__item"><a class="menu__link" href="">Клиенты</a></li>
+            <li class="menu__item"><a class="menu__link" href="">Магазин</a></li>
+            <li class="menu__item"><a class="menu__link" href="">Контакты</a></li>
+            <li class="menu__item basket"><a class="basket__link menu__link" href=""><img class="basket__img" src="images/Header/cart-icon.svg" alt="basket">Корзина</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-bottom container">
+        <div class="header__info">
+          <h1 class="header__title">Долго, дорого, скрупулезно.</h1>
+          <p class="header__text">Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+          <button class="header__btn btn btn--red">Узнать больше</button>
+        </div>
+        <div class="header-slider">
+          <div class="header-slider__item"><img src="images/Header/header-slider-image-1.png" alt="slider-item"></div>
+          <div class="header-slider__item"><img src="images/Header/header-slider-image-1.png" alt="slider-item"></div>
+          <div class="header-slider__item"><img src="images/Header/header-slider-image-1.png" alt="slider-item"></div>
+        </div>
+        <div class="header-slider__controls"></div>
+      </div>
+    </header>
+    <main class="main">
     </main>
     <footer class="footer"></footer>
-    <script src="static/js/jquery-3.3.1.min.js"></script>
-    <script src="static/js/main.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

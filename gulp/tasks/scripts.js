@@ -1,31 +1,31 @@
-const uglify = require("gulp-uglify"),
-	concat = require("gulp-concat"),
-	scriptsPATH = {
-		input: "./dev/static/js/",
-		output: "./build/static/js/",
-	},
-	babel = require("gulp-babel");
+// 👉 Variables
+const uglify = require("gulp-uglify");
+const concat = require("gulp-concat");
+const babel = require("gulp-babel");
+const scriptsPATH = {
+	input: "./source/js/",
+	output: "./build/js/",
+};
 
+/* ==============================
+ 👉 SCRIPTS
+ ================================ */
 module.exports = function () {
-	$.gulp.task("libsJS:dev", () => {
+	// Development task
+	$.gulp.task("js:vendors", () => {
 		return $.gulp
-			.src(["node_modules/svg4everybody/dist/svg4everybody.min.js"])
+			.src([
+				scriptsPATH.input + "/vendors/jquery-3.3.1.min.js",
+				scriptsPATH.input + "/vendors/slick.min.js",
+			])
 			.pipe(concat("libs.min.js"))
 			.pipe($.gulp.dest(scriptsPATH.output));
 	});
-
-	$.gulp.task("libsJS:build", () => {
-		return $.gulp
-			.src(["node_modules/svg4everybody/dist/svg4everybody.min.js"])
-			.pipe(concat("libs.min.js"))
-			.pipe(uglify())
-			.pipe($.gulp.dest(scriptsPATH.output));
-	});
-
+	// Development task
 	$.gulp.task("js:dev", () => {
 		return $.gulp
 			.src([
-				scriptsPATH.input + "*.js",
+				scriptsPATH.input + "main.js",
 				"!" + scriptsPATH.input + "libs.min.js",
 			])
 			.pipe(
@@ -40,11 +40,11 @@ module.exports = function () {
 				})
 			);
 	});
-
+	// Development task
 	$.gulp.task("js:build", () => {
 		return $.gulp
 			.src([
-				scriptsPATH.input + "*.js",
+				scriptsPATH.input + "main.js",
 				"!" + scriptsPATH.input + "libs.min.js",
 			])
 			.pipe(
@@ -54,11 +54,11 @@ module.exports = function () {
 			)
 			.pipe($.gulp.dest(scriptsPATH.output));
 	});
-
-	$.gulp.task("js:build-min", () => {
+	// Development task
+	$.gulp.task("js:min", () => {
 		return $.gulp
 			.src([
-				scriptsPATH.input + "*.js",
+				scriptsPATH.input + "main.js",
 				"!" + scriptsPATH.input + "libs.min.js",
 			])
 			.pipe(

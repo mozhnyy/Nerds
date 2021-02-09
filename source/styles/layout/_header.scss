@@ -1,0 +1,123 @@
+/* ==============================
+HEADER
+ ================================ */
+.header {
+	overflow-x: hidden;
+	background: #eeeeee;
+	.header-inner {
+		padding-top: 48px;
+		.nav {
+			display: flex;
+			justify-content: space-between;
+		}
+		.logo {
+			&:hover {
+				opacity: 0.7;
+			}
+			&:active {
+				opacity: 0.3;
+			}
+		}
+		.menu {
+			display: flex;
+			align-items: flex-end;
+			margin-bottom: 9px;
+			&__item {
+				&:not(:last-child) {
+					margin-right: 45px;
+				}
+			}
+
+			&__link {
+				text-transform: uppercase;
+				&:hover {
+					color: #fb565a;
+				}
+				&:active {
+					opacity: 0.3;
+				}
+			}
+		}
+
+		.basket {
+			margin-left: 201px;
+			&__link {
+			}
+			&__img {
+				margin-right: 24px;
+			}
+		}
+
+		.active {
+		}
+	}
+
+	.header-bottom {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 400px 1fr;
+		.header__info {
+		}
+		.header__title {
+			margin-top: 78px;
+			font-weight: 500;
+			font-size: 55px;
+			line-height: 55px;
+			margin-bottom: 25px;
+		}
+		.header__text {
+			margin-bottom: 38px;
+		}
+		.header__btn {
+			max-width: 240px;
+			width: 100%;
+		}
+		.header-slider {
+			position: relative;
+			&__item {
+				max-width: 760px;
+				width: 100%;
+			}
+		}
+	}
+}
+
+// .header-slider__controls {
+// 	.slick-dots {
+// 		position: absolute;
+// 		top: 50%;
+// 		left: 50%;
+// 		max-width: 46px;
+// 		width: 100%;
+// 		display: flex;
+// 		align-items: center;
+// 		justify-content: space-between;
+// 		margin: auto;
+// 	}
+// 	.slick-dots li button {
+// 		font-size: 0;
+// 		width: 10px;
+// 		height: 10px;
+// 		background-color: #c4c4c4;
+// 		border-radius: 50%;
+// 		outline: none;
+// 	}
+// 	.slick-dots li.slick-active button {
+// 		width: 12px;
+// 		height: 12px;
+// 		border: 1px solid rgba(0, 132, 244, 0.5);
+// 		position: relative;
+// 		background-color: #ffffff;
+// 		&::after {
+// 			position: absolute;
+// 			background-color: #0084f4;
+// 			content: "";
+// 			width: 9px;
+// 			height: 9px;
+// 			border-radius: 50%;
+// 			top: 50%;
+// 			left: 50%;
+// 			transform: translate(-50%, -50%);
+// 		}
+// 	}
+// }

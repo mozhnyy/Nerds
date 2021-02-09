@@ -1,17 +1,22 @@
-const plumber = require("gulp-plumber"),
-	scss = require("gulp-sass"),
-	autoprefixer = require("gulp-autoprefixer"),
-	csso = require("gulp-csso"),
-	csscomb = require("gulp-csscomb"),
-	sourcemaps = require("gulp-sourcemaps"),
-	rename = require("gulp-rename"),
-	qcmq = require("gulp-group-css-media-queries"),
-	stylesPATH = {
-		input: "./dev/static/styles/",
-		output: "./build/static/css/",
-	};
+// 👉 Variables
+const plumber = require("gulp-plumber");
+const scss = require("gulp-sass");
+const autoprefixer = require("gulp-autoprefixer");
+const csso = require("gulp-csso");
+const csscomb = require("gulp-csscomb");
+const sourcemaps = require("gulp-sourcemaps");
+const rename = require("gulp-rename");
+const qcmq = require("gulp-group-css-media-queries");
+const stylesPATH = {
+	input: "./source/styles/",
+	output: "./build/css/",
+};
 
+/* ==============================
+👉 STYLES
+ ================================ */
 module.exports = function () {
+	// task
 	$.gulp.task("styles:dev", () => {
 		return $.gulp
 			.src(stylesPATH.input + "styles.scss")
@@ -28,6 +33,7 @@ module.exports = function () {
 			.pipe($.gulp.dest(stylesPATH.output))
 			.on("end", $.browserSync.reload);
 	});
+	// task
 	$.gulp.task("styles:build", () => {
 		return $.gulp
 			.src(stylesPATH.input + "styles.scss")
@@ -43,7 +49,8 @@ module.exports = function () {
 			.pipe(rename("styles.css"))
 			.pipe($.gulp.dest(stylesPATH.output));
 	});
-	$.gulp.task("styles:build-min", () => {
+	// task
+	$.gulp.task("styles:min", () => {
 		return $.gulp
 			.src(stylesPATH.input + "styles.scss")
 			.pipe(scss())
@@ -51,7 +58,7 @@ module.exports = function () {
 			.pipe(qcmq())
 			.pipe(csscomb())
 			.pipe(csso())
-			.pipe(rename("styles.css"))
+			.pipe(rename("styles.min.css"))
 			.pipe($.gulp.dest(stylesPATH.output));
 	});
 };

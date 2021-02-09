@@ -22,42 +22,26 @@ $.gulp.task(
 			"fonts",
 			"styles:dev",
 			"img:dev",
-			"libsJS:dev",
-			"js:dev",
-			"svg"
+			"js:vendors",
+			"js:dev"
+			// "svg"
 		)
 	)
 );
 
 $.gulp.task(
-	"build",
+	"prod",
 	$.gulp.series(
 		"clean",
 		$.gulp.parallel(
 			"pug",
 			"fonts",
-			"styles:build",
+			"styles:min",
 			"img:build",
-			"libsJS:build",
-			"js:build",
-			"svg"
-		)
-	)
-);
-
-$.gulp.task(
-	"build-min",
-	$.gulp.series(
-		"clean",
-		$.gulp.parallel(
-			"pug",
-			"fonts",
-			"styles:build-min",
-			"img:build",
-			"libsJS:build",
-			"js:build-min",
-			"svg"
-		)
+			"js:vendors",
+			"js:min"
+		),
+		$.gulp.parallel("styles:build", "js:build")
 	)
 );
 
