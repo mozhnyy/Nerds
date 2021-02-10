@@ -9,31 +9,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="img/png" href="images/favicon.png">
   </head>
-  <body>
+  <body class="index-body">
     <header class="header">
-      <div class="header-inner container">
-        <nav class="nav"><a class="logo" href="#"><img src="images/Header/nerds-logo.svg" alt="Nerds"></a>
+      <nav class="nav container"><a class="logo" href="#"><img src="images/Header/nerds-logo.svg" alt="Nerds"></a>
+        <button class="hamburger hamburger--elastic"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+        <div class="header__wrapper">
           <ul class="menu">
-            <li class="menu__item"><a class="menu__link" href="">Студия</a></li>
-            <li class="menu__item"><a class="menu__link" href="">Клиенты</a></li>
-            <li class="menu__item"><a class="menu__link" href="">Магазин</a></li>
-            <li class="menu__item"><a class="menu__link" href="">Контакты</a></li>
-            <li class="menu__item basket"><a class="basket__link menu__link" href=""><img class="basket__img" src="images/Header/cart-icon.svg" alt="basket">Корзина</a></li>
+            <li class="menu__item"><a class="menu__link menu__link-current" href="#">Студия</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Клиенты</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Магазин</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
           </ul>
-        </nav>
-      </div>
-      <div class="header-bottom container">
-        <div class="header__info">
-          <h1 class="header__title">Долго, дорого, скрупулезно.</h1>
-          <p class="header__text">Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-          <button class="header__btn btn btn--red">Узнать больше</button>
+          <ul class="menu menu__user">
+            <li class="menu__item"><a class="menu__link" href="#"><img class="basket__img" src="images/Header/cart-icon.svg" alt="basket">Корзина</a></li>
+          </ul>
         </div>
-        <div class="header-slider">
-          <div class="header-slider__item"><img src="images/Header/header-slider-image-1.png" alt="slider-item"></div>
-          <div class="header-slider__item"><img src="images/Header/header-slider-image-1.png" alt="slider-item"></div>
-          <div class="header-slider__item"><img src="images/Header/header-slider-image-1.png" alt="slider-item"></div>
-        </div>
-        <div class="header-slider__controls"></div>
+      </nav>
+      <div class="header__slider">
+        <ul class="slider">
+          <li class="slider__item">
+            <h2 class="slider__title">Долго, дорого, скрупулезно.</h2>
+            <p class="slider__text">Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+            <button class="slider__btn btn btn--red">УЗНАТЬ БОЛЬШЕ</button>
+          </li>
+          <li class="slider__item">
+            <h2 class="slider__title">Любим математику как никто другой</h2>
+            <p class="slider__text">Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
+            <button class="slider__btn btn btn--red">УЗНАТЬ БОЛЬШЕ</button>
+          </li>
+          <li class="slider__item">
+            <h2 class="slider__title">Только ночь, только хардкор</h2>
+            <p class="slider__text">Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+            <button class="slider__btn btn btn--red">УЗНАТЬ БОЛЬШЕ</button>
+          </li>
+        </ul>
+        <ul class="slider-controls">
+          <li class="slider-controls__item">
+            <button class="slider-controls__btn slider-controls__btn-current"></button>
+          </li>
+          <li class="slider-controls__item">
+            <button class="slider-controls__btn"></button>
+          </li>
+          <li class="slider-controls__item">
+            <button class="slider-controls__btn"></button>
+          </li>
+        </ul>
       </div>
     </header>
     <main class="main">
