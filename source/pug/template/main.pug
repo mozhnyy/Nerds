@@ -2,7 +2,7 @@
 block variables
 
 doctype html
-html(lang="en")
+html(lang="ru")
 	head
 		meta(charset="utf-8")
 		title #{title}
@@ -13,14 +13,18 @@ html(lang="en")
 		link(rel="stylesheet" type="text/css" href="css/styles.css")
 		link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet")
 		link(rel="shortcut icon" type="img/png" href="images/favicon.png")
-	body.index-body
-		block header
-			include ../modules/header.pug
+	body
+		// Header
+		include ../modules/header.pug
+
+		// Main
 		main.main
 			block content
-		block footer
-			include ../modules/footer.pug
 
+		// Footer
+		include ../modules/footer.pug
+
+		// Script
 		script(src="js/libs.min.js")
 		script(src="js/main.js")
 		block script

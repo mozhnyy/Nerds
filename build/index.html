@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <title>Nerds</title><!--[if IE]>
@@ -9,87 +9,93 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="img/png" href="images/favicon.png">
   </head>
-  <body class="index-body">
+  <body>
+    <!-- Header-->
     <header class="header">
-      <nav class="nav container"><a class="logo" href="#"><img src="images/Header/nerds-logo.svg" alt="Nerds"></a>
-        <button class="hamburger hamburger--elastic"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+      <!-- Navigation-->
+      <nav class="nav container">
+        <!-- Logo--><a class="logo"><img src="images/Header/nerds-logo.svg" alt="Nerds"></a>
+        <!-- Bugger-->
+        <button class="hamburger hamburger--elastic" aria-label="Mobile burger"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+        <!---->
         <div class="header__wrapper">
+          <!-- Menu-->
           <ul class="menu">
-            <li class="menu__item"><a class="menu__link menu__link-current" href="#">Студия</a></li>
+            <li class="menu__item"><a class="menu__link menu__link--current" href="#">Студия</a></li>
             <li class="menu__item"><a class="menu__link" href="#">Клиенты</a></li>
             <li class="menu__item"><a class="menu__link" href="catalog.html">Магазин</a></li>
             <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
           </ul>
-          <ul class="menu menu__user">
-            <li class="menu__item"><a class="menu__link" href="#"><img class="basket__img" src="images/Header/cart-icon.svg" alt="basket">Корзина</a></li>
+          <!-- User-->
+          <ul class="menu-user">
+            <li class="menu-user__item"><a class="menu-user__link menu__link" href="#">Корзина</a></li>
           </ul>
         </div>
       </nav>
-      <div class="header__slider container">
-        <ul class="slider">
-          <li class="slider__item">
-            <h2 class="slider__title">Долго, дорого, скрупулезно.</h2>
-            <p class="slider__text">Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-            <button class="slider__btn btn btn--red">УЗНАТЬ БОЛЬШЕ</button>
-          </li>
-          <li class="slider__item">
-            <h2 class="slider__title">Любим математику как никто другой</h2>
-            <p class="slider__text">Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
-            <button class="slider__btn btn btn--red">УЗНАТЬ БОЛЬШЕ</button>
-          </li>
-          <li class="slider__item">
-            <h2 class="slider__title">Только ночь, только хардкор</h2>
-            <p class="slider__text">Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
-            <button class="slider__btn btn btn--red">УЗНАТЬ БОЛЬШЕ</button>
-          </li>
-        </ul>
-        <ul class="slider-controls">
-          <li class="slider-controls__item">
-            <button class="slider-controls__btn slider-controls__btn-current"></button>
-          </li>
-          <li class="slider-controls__item">
-            <button class="slider-controls__btn"></button>
-          </li>
-          <li class="slider-controls__item">
-            <button class="slider-controls__btn"></button>
-          </li>
-        </ul>
-      </div>
     </header>
+    <!-- Main-->
     <main class="main">
-      <sections class="services container">
-        <ul class="services-list container">
-          <li class="services-list__item">
-            <div class="services-list__wrapper"><img src="images/Services/services-img1.jpg" alt="site"></div>
+      <section class="intro">
+        <div class="carousel container">
+          <ul class="slider">
+            <li class="slider__item">
+              <h2 class="slider__title">Долго, дорого, скрупулезно.</h2>
+              <p class="slider__text">Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+              <button class="slider__btn btn btn--red">УЗНАТЬ БОЛЬШЕ</button>
+            </li>
+            <li class="slider__item">
+              <h2 class="slider__title">Любим математику как никто другой</h2>
+              <p class="slider__text">Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
+              <button class="slider__btn btn btn--red">УЗНАТЬ БОЛЬШЕ</button>
+            </li>
+            <li class="slider__item">
+              <h2 class="slider__title">Только ночь, только хардкор</h2>
+              <p class="slider__text">Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+              <button class="slider__btn btn btn--red">УЗНАТЬ БОЛЬШЕ</button>
+            </li>
+          </ul>
+          <ul class="slider-controls">
+            <li class="slider-controls__item">
+              <button class="slider-controls__btn slider-controls__btn-current"></button>
+            </li>
+            <li class="slider-controls__item">
+              <button class="slider-controls__btn"></button>
+            </li>
+            <li class="slider-controls__item">
+              <button class="slider-controls__btn"></button>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="services container">
+        <ul class="services-list">
+          <li class="services-list__item"><img class="services-list__image" src="images/Services/services-img1.jpg" alt="site">
             <h3 class="services-list__title">Веб-сайты</h3>
-            <p class="services-list__text">Мир никогда не будет прежним после того как увидит ваш сайт!</p><a class="services-list__btn btn btn--red">Заказать</a>
+            <p class="services-list__text">Мир никогда не будет прежним после того как увидит ваш сайт!</p><a class="services-list__btn btn btn--red" href="#"> Заказать</a>
           </li>
-          <li class="services-list__item">
-            <div class="services-list__wrapper"><img src="images/Services/services-img2.jpg" alt="app"></div>
+          <li class="services-list__item"><img class="services-list__image" src="images/Services/services-img2.jpg" alt="app">
             <h3 class="services-list__title">Приложения</h3>
-            <p class="services-list__text">Покорите топ-10 приложений в AppStore и Google Play</p><a class="services-list__btn btn btn--green">Заказать</a>
+            <p class="services-list__text">Покорите топ-10 приложений в AppStore и Google Play</p><a class="services-list__btn btn btn--green" href="#"> Заказать</a>
           </li>
-          <li class="services-list__item">
-            <div class="services-list__wrapper"><img src="images/Services/services-img3.jpg" alt="presentation"></div>
+          <li class="services-list__item"><img class="services-list__image" src="images/Services/services-img3.jpg" alt="presentation">
             <h3 class="services-list__title">Презентации</h3>
-            <p class="services-list__text">Вы даже не подозреваете, насколько вы изумительны!</p><a class="services-list__btn btn btn--yellow">Заказать</a>
+            <p class="services-list__text">Вы даже не подозреваете, насколько вы изумительны!</p><a class="services-list__btn btn btn--yellow" href="#"> Заказать</a>
           </li>
         </ul>
-      </sections>
+      </section>
       <section class="about container">
         <div class="about__column">
-          <h2 class="about__title">Мы — маленькая, но гордая дизайн-студия из Краснодара.</h2>
+          <p class="about__title">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
           <p class="about__text">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
-          <p class="about__head-text">Выполняем заказы на разработку:</p>
+          <h3 class="about__head-text">Выполняем заказы на разработку:</h3>
           <ul class="about-list">
             <li class="about-list__item">Веб-сайтов любой сложности</li>
             <li class="about-list__item">Мобильных приложений для iOS и Android</li>
             <li class="about-list__item">Слайдшоу и видео для корпоративных презентаций</li>
           </ul>
         </div>
-        <div class="about__column">
-          <div class="about__logo"><img src="images/About/nerds-about.png" alt="Nerds-logo"></div>
-          <p class="about-features__text">с 2004 года Любим точность во всем:</p>
+        <div class="about__column"><img class="about__logo" src="images/About/nerds-about.png" alt="Nerds-logo">
+          <h3 class="about-features__text">с 2004 года Любим точность во всем:</h3>
           <ul class="about-features-list">
             <li class="about-features-list__item"><span class="about-features-list__number d-block">146<sup>%</sup></span><span class="about-features-list__name">Уровень самоотдачи</span></li>
             <li class="about-features-list__item"><span class="about-features-list__number d-block">100<sup>%</sup></span><span class="about-features-list__name">Соблюдение сроков</span></li>
@@ -99,24 +105,29 @@
       </section>
       <section class="clients container">
         <ul class="clients-list">
-          <li class="clients-list__item"><img src="images/Clients/html-academy-icon.svg" alt="html-academy"></li>
-          <li class="clients-list__item"><img src="images/Clients/borodinski-icon.svg" alt="borodinski"></li>
-          <li class="clients-list__item"><img src="images/Clients/pink-icon.svg" alt="pink"></li>
-          <li class="clients-list__item"><img src="images/Clients/mishka-icon.svg" alt="mishka"></li>
+          <li class="clients-list__item"><a class="clients-list__link" href="#"><img src="images/Clients/html-academy-icon.svg" alt="html-academy"></a></li>
+          <li class="clients-list__item"><a class="clients-list__link" href="#"><img src="images/Clients/borodinski-icon.svg" alt="borodinski"></a></li>
+          <li class="clients-list__item"><a class="clients-list__link" href="#"><img src="images/Clients/pink-icon.svg" alt="pink"></a></li>
+          <li class="clients-list__item"><a class="clients-list__link" href="#"><img src="images/Clients/mishka-icon.svg" alt="mishka"></a></li>
         </ul>
       </section>
     </main>
-    <footer class="footer container">
-      <ul class="footer-social-list">
-        <li class="footer-social-list__item"><img src="images/Footer/vk-icon.svg" alt="vk"></li>
-        <li class="footer-social-list__item"><img src="images/Footer/fb-icon.svg" alt="fb"></li>
-        <li class="footer-social-list__item"><img src="images/Footer/inst-icon.svg" alt="inst"></li>
-      </ul>
-      <div class="footer-info">
-        <h3 class="footer-info__title">Давайте дружить, это выгодно!</h3>
-        <p class="footer-info__text">Скидка 10% для друзей из социальных сетей.</p>
-      </div>
+    <!-- Footer-->
+    <footer class="footer">
+      <!-- Top-->
+      <section class="footer-top footer-contacts"></section>
+      <!-- Bottom-->
+      <section class="footer-bottom container">
+        <!-- Social-->
+        <ul class="social">
+          <li class="social__item"><a class="social__link" href="#" aria-label="Facebook"><svg width="27" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.138 11.51c.956-.309 2.18 2.04 3.483 2.939.978.681 1.727.534 1.727.534l3.473-.05s1.815-.112.957-1.554c-.071-.12-.503-1.069-2.585-3.022-2.177-2.043-1.882-1.712.739-5.244 1.597-2.153 2.236-3.468 2.036-4.028-.192-.539-1.365-.399-1.365-.399L20.69.713c-.381.001-.704.119-.851.515-.003.004-.621 1.666-1.445 3.079-1.741 2.989-2.436 3.148-2.724 2.961-.661-.433-.494-1.737-.494-2.664 0-2.897.432-4.105-.846-4.417-.427-.104-.739-.172-1.828-.182-1.392-.021-2.574 0-3.244.329-.445.223-.786.712-.579.74.26.035.843.16 1.155.586.401.552.389 1.789.389 1.789s.229 3.411-.54 3.834c-.528.29-1.25-.302-2.803-3.016-.793-1.388-1.392-2.922-1.392-2.922s-.116-.285-.326-.441c-.25-.185-.6-.244-.6-.244L.848.684S.29.7.085.946c-.182.218-.015.668-.015.668s2.909 6.881 6.203 10.347c3.02 3.182 6.452 2.971 6.452 2.971h1.555s.469-.054.709-.312c.224-.24.214-.691.214-.691s-.031-2.109.935-2.419z" fill="none"/></svg></a></li>
+          <li class="social__item"><a class="social__link" href="#" aria-label="Facebook"><svg width="27" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.138 11.51c.956-.309 2.18 2.04 3.483 2.939.978.681 1.727.534 1.727.534l3.473-.05s1.815-.112.957-1.554c-.071-.12-.503-1.069-2.585-3.022-2.177-2.043-1.882-1.712.739-5.244 1.597-2.153 2.236-3.468 2.036-4.028-.192-.539-1.365-.399-1.365-.399L20.69.713c-.381.001-.704.119-.851.515-.003.004-.621 1.666-1.445 3.079-1.741 2.989-2.436 3.148-2.724 2.961-.661-.433-.494-1.737-.494-2.664 0-2.897.432-4.105-.846-4.417-.427-.104-.739-.172-1.828-.182-1.392-.021-2.574 0-3.244.329-.445.223-.786.712-.579.74.26.035.843.16 1.155.586.401.552.389 1.789.389 1.789s.229 3.411-.54 3.834c-.528.29-1.25-.302-2.803-3.016-.793-1.388-1.392-2.922-1.392-2.922s-.116-.285-.326-.441c-.25-.185-.6-.244-.6-.244L.848.684S.29.7.085.946c-.182.218-.015.668-.015.668s2.909 6.881 6.203 10.347c3.02 3.182 6.452 2.971 6.452 2.971h1.555s.469-.054.709-.312c.224-.24.214-.691.214-.691s-.031-2.109.935-2.419z" fill="none"/></svg></a></li>
+          <li class="social__item"><a class="social__link" href="#" aria-label="Facebook"><svg width="27" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.138 11.51c.956-.309 2.18 2.04 3.483 2.939.978.681 1.727.534 1.727.534l3.473-.05s1.815-.112.957-1.554c-.071-.12-.503-1.069-2.585-3.022-2.177-2.043-1.882-1.712.739-5.244 1.597-2.153 2.236-3.468 2.036-4.028-.192-.539-1.365-.399-1.365-.399L20.69.713c-.381.001-.704.119-.851.515-.003.004-.621 1.666-1.445 3.079-1.741 2.989-2.436 3.148-2.724 2.961-.661-.433-.494-1.737-.494-2.664 0-2.897.432-4.105-.846-4.417-.427-.104-.739-.172-1.828-.182-1.392-.021-2.574 0-3.244.329-.445.223-.786.712-.579.74.26.035.843.16 1.155.586.401.552.389 1.789.389 1.789s.229 3.411-.54 3.834c-.528.29-1.25-.302-2.803-3.016-.793-1.388-1.392-2.922-1.392-2.922s-.116-.285-.326-.441c-.25-.185-.6-.244-.6-.244L.848.684S.29.7.085.946c-.182.218-.015.668-.015.668s2.909 6.881 6.203 10.347c3.02 3.182 6.452 2.971 6.452 2.971h1.555s.469-.054.709-.312c.224-.24.214-.691.214-.691s-.031-2.109.935-2.419z" fill="none"/></svg></a></li>
+        </ul>
+        <p class="footer-discount"><span class="footer-discount__title">Давайте дружить, это выгодно!</span>Скидка 10% для друзей из социальных сетей.</p>
+      </section>
     </footer>
+    <!-- Script-->
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
   </body>
