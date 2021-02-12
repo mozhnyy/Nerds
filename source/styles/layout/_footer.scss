@@ -1,6 +1,28 @@
 /* ==============================
 FOOTER
  ================================ */
-footer.footer {
-	flex: 0 0 auto;
+.footer {
+	display: flex;
+	flex-direction: row;
+	padding-top: 68px;
+	padding-bottom: 76px;
+	&-info {
+		margin-left: 139px;
+	}
+	&-info__title {
+		font-size: 36px;
+		line-height: 36px;
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
+	&-info__text {
+	}
+	&-social-list {
+		display: flex;
+		justify-content: space-between;
+		max-width: 270px;
+		width: 100%;
+	}
+	&-social-list__item {
+	}
 }

@@ -1,0 +1,26 @@
+
+header.header
+	nav.nav.container
+		a.logo(href="index.html")
+			img(src="images/Header/nerds-logo.svg", alt="Nerds")
+
+		button.hamburger.hamburger--elastic
+			span.hamburger-box
+				span.hamburger-inner
+		.header__wrapper
+			ul.menu
+				li.menu__item
+					a.menu__link.menu__link-current(href="index.html") Студия
+				li.menu__item
+					a.menu__link(href="#") Клиенты
+				li.menu__item
+					a.menu__link(href="catalog.html") Магазин
+				li.menu__item
+					a.menu__link(href="#") Контакты
+			ul.menu.menu__user
+				li.menu__item
+					a.menu__link(href="#")
+						img.basket__img(src="images/Header/cart-icon.svg", alt="basket")
+						| Корзина
+	.header__bottom.container
+		h2.header-bottom__title Магазин готовых шаблонов

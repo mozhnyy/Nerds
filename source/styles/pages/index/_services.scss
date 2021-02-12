@@ -1,0 +1,46 @@
+/* ==============================
+INTRO
+ ================================ */
+.services {
+	// padding: 80px 10px;
+	&-list {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+		width: 100%;
+		border-bottom: 2px solid #eee;
+		padding-bottom: 80px;
+		padding-top: 80px;
+		@media (max-width: 784px) {
+			flex-direction: column;
+			align-items: center;
+		}
+		&__item {
+			width: 32%;
+			max-width: 300px;
+			@media (max-width: 784px) {
+				margin-bottom: 20px;
+				max-width: 400px;
+				width: 100%;
+				text-align: center;
+				border-bottom: 2px solid #eee;
+				padding-bottom: 10px;
+			}
+		}
+		&__wrapper {
+			margin-bottom: 25px;
+		}
+		&__title {
+			font-size: 24px;
+			line-height: 30px;
+			margin-bottom: 16px;
+		}
+		&__text {
+			margin-bottom: 32px;
+		}
+		&__btn {
+			max-width: 160px;
+			width: 100%;
+		}
+	}
+}

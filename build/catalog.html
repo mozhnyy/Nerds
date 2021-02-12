@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Nerds</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="img/png" href="images/favicon.png">
+  </head>
+  <body class="catalog-body">
+    <header class="header">
+      <nav class="nav container"><a class="logo" href="index.html"><img src="images/Header/nerds-logo.svg" alt="Nerds"></a>
+        <button class="hamburger hamburger--elastic"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+        <div class="header__wrapper">
+          <ul class="menu">
+            <li class="menu__item"><a class="menu__link menu__link-current" href="index.html">Студия</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Клиенты</a></li>
+            <li class="menu__item"><a class="menu__link" href="catalog.html">Магазин</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+          </ul>
+          <ul class="menu menu__user">
+            <li class="menu__item"><a class="menu__link" href="#"><img class="basket__img" src="images/Header/cart-icon.svg" alt="basket">Корзина</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="header__bottom container">
+        <h2 class="header-bottom__title">Магазин готовых шаблонов</h2>
+      </div>
+    </header>
+    <main class="main">
+      <section class="catalog container">
+        <div class="catalog-filters">
+          <form class="catalog-form">
+            <fieldset class="catalog-form__fieldset">
+              <legend class="catalog-form__legend">СТОИМОСТЬ:</legend>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min"></div>
+                  <div class="toggle toggle-max"></div>
+                </div>
+                <div class="price-controls">
+                  <label class="price-controls__label min-price">от
+                    <input name="min-price" type="text" value="0">
+                  </label>
+                  <label class="price-controls__label max-price">до
+                    <input name="max-price" type="text" value="15000">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="catalog-form__fieldset">
+              <legend class="catalog-form__legend">СЕТКА:</legend>
+              <div class="catalog-form__group">
+                <input class="catalog-form__radio" type="radio" name="grid" id="responsive">
+                <label class="catalog-form__label" for="responsive">Адаптивная</label>
+              </div>
+              <div class="catalog-form__group">
+                <input class="catalog-form__radio" type="radio" name="grid" id="fixed">
+                <label class="catalog-form__label" for="fixed">Фиксированная</label>
+              </div>
+              <div class="catalog-form__group">
+                <input class="catalog-form__radio" type="radio" name="grid" id="rubber">
+                <label class="catalog-form__label" for="rubber">Резиновая</label>
+              </div>
+            </fieldset>
+            <fieldset class="catalog-form__fieldset">
+              <legend class="catalog-form__legend">ОСОБЕННОСТИ:</legend>
+              <div class="catalog-form__group">
+                <input class="catalog-form__checkbox" type="checkbox" name="grid" id="slider" checked>
+                <label class="catalog-form__label" for="slider">Слайдер</label>
+              </div>
+              <div class="catalog-form__group">
+                <input class="catalog-form__checkbox" type="checkbox" name="grid" id="advantages-block">
+                <label class="catalog-form__label" for="advantages-block">Блок преимуществ</label>
+              </div>
+              <div class="catalog-form__group">
+                <input class="catalog-form__checkbox" type="checkbox" name="grid" id="news" checked>
+                <label class="catalog-form__label" for="news">Новости</label>
+              </div>
+              <div class="catalog-form__group">
+                <input class="catalog-form__checkbox" type="checkbox" name="grid" id="gallery">
+                <label class="catalog-form__label" for="gallery">Галерея</label>
+              </div>
+              <div class="catalog-form__group">
+                <input class="catalog-form__checkbox" type="checkbox" name="grid" id="cart">
+                <label class="catalog-form__label" for="cart">Корзина</label>
+              </div>
+            </fieldset>
+            <button class="catalog-form__btn btn">Показать</button>
+          </form>
+        </div>
+        <div class="catalog-content">
+          <div class="catalog-header">
+            <h3 class="catalog-header__title">СОРТИРОВАТЬ:</h3>
+            <ul class="catalog-types-list">
+              <li class="catalog-types__item"><a class="catalog-types__link catalog-types__link-current" href="">По цене</a></li>
+              <li class="catalog-types__item"><a class="catalog-types__link" href="">По типу</a></li>
+              <li class="catalog-types__item"><a class="catalog-types__link" href="">По названию</a></li>
+              <li class="catalog-types__item"><a class="catalog-types__dir catalog-types__dir-up catalog-types__dir-current" href=""></a><a class="catalog-types__dir catalog-types__dir-down" href=""></a></li>
+            </ul>
+          </div>
+          <div class="catalog-list">
+            <li class="catalog-list__item">
+              <div class="catalog-list__header"><img src="/images/Catalog/browser-icon.png" alt="browser-icon"></div>
+              <div class="catalog-list__wrapper"><img src="/images/Catalog/project-1.jpg" alt="Sedona"></div>
+              <div class="catalog-list__desc">
+                <h3 class="catalog-list__head">Sedona</h3>
+                <p class="catalog-list__text">Информационный сайт для туристов</p>
+                <button class="catalog-list__btn btn btn--red">9 900 руб.</button>
+              </div>
+            </li>
+            <li class="catalog-list__item">
+              <div class="catalog-list__header"><img src="/images/Catalog/browser-icon.png" alt="browser-icon"></div>
+              <div class="catalog-list__wrapper"><img src="/images/Catalog/project-2.jpg" alt="Pink App"></div>
+              <div class="catalog-list__desc">
+                <h3 class="catalog-list__head">Pink App</h3>
+                <p class="catalog-list__text">Продуктовый лендинг приложения для iOS и Android</p>
+                <button class="catalog-list__btn btn btn--red">9 900 руб.</button>
+              </div>
+            </li>
+            <li class="catalog-list__item">
+              <div class="catalog-list__header"><img src="/images/Catalog/browser-icon.png" alt="browser-icon"></div>
+              <div class="catalog-list__wrapper"><img src="/images/Catalog/project-3.jpg" alt="Barbershop"></div>
+              <div class="catalog-list__desc">
+                <h3 class="catalog-list__head">Barbershop</h3>
+                <p class="catalog-list__text">Сайт салона красоты. Для мужчин, да.</p>
+                <button class="catalog-list__btn btn btn--red">9 900 руб.</button>
+              </div>
+            </li>
+            <li class="catalog-list__item">
+              <div class="catalog-list__header"><img src="/images/Catalog/browser-icon.png" alt="browser-icon"></div>
+              <div class="catalog-list__wrapper"><img src="/images/Catalog/project-4.jpg" alt="MISHKA"></div>
+              <div class="catalog-list__desc">
+                <h3 class="catalog-list__head">MISHKA</h3>
+                <p class="catalog-list__text">Интернет-магазин вязаных игрушек</p>
+                <button class="catalog-list__btn btn btn--red">9 900 руб.</button>
+              </div>
+            </li>
+            <li class="catalog-list__item">
+              <div class="catalog-list__header"><img src="/images/Catalog/browser-icon.png" alt="browser-icon"></div>
+              <div class="catalog-list__wrapper"><img src="/images/Catalog/project-5.jpg" alt="A Plus"></div>
+              <div class="catalog-list__desc">
+                <h3 class="catalog-list__head">A Plus</h3>
+                <p class="catalog-list__text">Лендинг курсов повышения квалификации</p>
+                <button class="catalog-list__btn btn btn--red">9 900 руб.</button>
+              </div>
+            </li>
+            <li class="catalog-list__item">
+              <div class="catalog-list__header"><img src="/images/Catalog/browser-icon.png" alt="browser-icon"></div>
+              <div class="catalog-list__wrapper"><img src="/images/Catalog/project-6.jpg" alt="КВАСТ"></div>
+              <div class="catalog-list__desc">
+                <h3 class="catalog-list__head">КВАСТ</h3>
+                <p class="catalog-list__text">Промо-сайт производителя крафтового кваса</p>
+                <button class="catalog-list__btn btn btn--red">9 900 руб.</button>
+              </div>
+            </li>
+          </div>
+          <ul class="pagination">
+            <li class="pagination__item"><a class="pagination__link pagination__link-current" href="">1</a></li>
+            <li class="pagination__item"><a class="pagination__link" href="">2</a></li>
+            <li class="pagination__item"><a class="pagination__link" href="">3</a></li>
+            <li class="pagination__item"><a class="pagination__link" href="">следующая</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer container">
+      <ul class="footer-social-list">
+        <li class="footer-social-list__item"><img src="images/Footer/vk-icon.svg" alt="vk"></li>
+        <li class="footer-social-list__item"><img src="images/Footer/fb-icon.svg" alt="fb"></li>
+        <li class="footer-social-list__item"><img src="images/Footer/inst-icon.svg" alt="inst"></li>
+      </ul>
+      <div class="footer-info">
+        <h3 class="footer-info__title">Давайте дружить, это выгодно!</h3>
+        <p class="footer-info__text">Скидка 10% для друзей из социальных сетей.</p>
+      </div>
+    </footer>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

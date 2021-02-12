@@ -123,6 +123,8 @@ HEADER
 	.header__slider {
 		position: relative;
 		overflow: hidden;
+		padding-left: 0;
+		padding-right: 0;
 		.slider {
 			width: 300%;
 			height: 100%;
@@ -133,20 +135,61 @@ HEADER
 				padding: 80px 0;
 				text-align: center;
 				overflow: hidden;
+				@media (min-width: $lg) {
+					text-align: left;
+					&:nth-child(1) {
+						background: #eee
+							url("../images/Header/nerds-index-slide1.png")
+							no-repeat right bottom;
+						background-size: 70%;
+					}
+
+					&:nth-child(2) {
+						background: #eee
+							url("../images/Header/nerds-index-slide2.png")
+							no-repeat right bottom;
+						background-size: 70%;
+					}
+
+					&:nth-child(3) {
+						background: #eee
+							url("../images/Header/nerds-index-slide3.png")
+							no-repeat right bottom;
+						background-size: 70%;
+					}
+				}
 			}
+
 			&__title {
-				font-size: 25px;
+				@include fluidFontSize(25px, 55px, 320px, 992px, 25px);
+				@include fluid(
+					"line-height",
+					(
+						320px: 24px,
+						992px: 55px,
+					)
+				);
 				font-weight: 500;
 				max-width: 400px;
 				width: 100%;
 				margin: auto;
 				margin-bottom: 28px;
+				@media (min-width: $lg) {
+					text-align: left;
+					margin: 0;
+					margin-bottom: 28px;
+				}
 			}
 			&__text {
 				max-width: 400px;
 				width: 100%;
 				margin: auto;
 				margin-bottom: 38px;
+				@media (min-width: $lg) {
+					text-align: left;
+					margin: 0;
+					margin-bottom: 28px;
+				}
 			}
 			&__btn {
 				max-width: 240px;
@@ -185,5 +228,18 @@ HEADER
 				border-radius: 50%;
 			}
 		}
+	}
+}
+
+// CATALOG HEADER
+.header-bottom__title {
+	padding-top: 78px;
+	padding-bottom: 102px;
+	text-align: center;
+	font-size: 55px;
+	line-height: 55px;
+	@media (max-width: $md) {
+		font-size: 35px;
+		line-height: 35px;
 	}
 }

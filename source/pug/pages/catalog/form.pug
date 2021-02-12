@@ -1,0 +1,139 @@
+section.catalog.container
+	//- Блок фильтров
+	.catalog-filters
+		form.catalog-form
+
+			fieldset.catalog-form__fieldset
+				legend.catalog-form__legend СТОИМОСТЬ:
+				.range-filter
+					.range-controls
+						.scale
+							.bar
+						.toggle.toggle-min
+						.toggle.toggle-max
+					.price-controls
+						label.price-controls__label.min-price от
+							input(name="min-price" type="text" value="0")
+						label.price-controls__label.max-price до
+							input(name="max-price" type="text" value="15000")
+
+			fieldset.catalog-form__fieldset
+				legend.catalog-form__legend СЕТКА:
+				.catalog-form__group
+					input.catalog-form__radio(type="radio" name="grid" id="responsive")
+					label.catalog-form__label(for="responsive") Адаптивная
+				.catalog-form__group
+					input.catalog-form__radio(type="radio" name="grid" id="fixed")
+					label.catalog-form__label(for="fixed") Фиксированная
+				.catalog-form__group
+					input.catalog-form__radio(type="radio" name="grid" id="rubber")
+					label.catalog-form__label(for="rubber") Резиновая
+
+			fieldset.catalog-form__fieldset
+				legend.catalog-form__legend ОСОБЕННОСТИ:
+				.catalog-form__group
+					input.catalog-form__checkbox(type="checkbox" name="grid" id="slider" checked)
+					label.catalog-form__label(for="slider") Слайдер
+				.catalog-form__group
+					input.catalog-form__checkbox(type="checkbox" name="grid" id="advantages-block")
+					label.catalog-form__label(for="advantages-block") Блок преимуществ
+				.catalog-form__group
+					input.catalog-form__checkbox(type="checkbox" name="grid" id="news" checked)
+					label.catalog-form__label(for="news") Новости
+				.catalog-form__group
+					input.catalog-form__checkbox(type="checkbox" name="grid" id="gallery")
+					label.catalog-form__label(for="gallery") Галерея
+				.catalog-form__group
+					input.catalog-form__checkbox(type="checkbox" name="grid" id="cart")
+					label.catalog-form__label(for="cart") Корзина
+
+			button.catalog-form__btn.btn Показать
+
+	//- Блок с контентом
+	.catalog-content
+		//- Шапка с фильтрами
+		.catalog-header
+			h3.catalog-header__title СОРТИРОВАТЬ:
+			ul.catalog-types-list
+				li.catalog-types__item
+					a.catalog-types__link.catalog-types__link-current(href="") По цене
+				li.catalog-types__item
+					a.catalog-types__link(href="") По типу
+				li.catalog-types__item
+					a.catalog-types__link(href="") По названию
+				li.catalog-types__item
+					a.catalog-types__dir.catalog-types__dir-up.catalog-types__dir-current(href="")
+					a.catalog-types__dir.catalog-types__dir-down(href="")
+
+		.catalog-list
+			//- 1
+			li.catalog-list__item
+				.catalog-list__header
+					img(src="/images/Catalog/browser-icon.png", alt="browser-icon")
+				.catalog-list__wrapper
+					img(src="/images/Catalog/project-1.jpg", alt="Sedona")
+				.catalog-list__desc
+					h3.catalog-list__head Sedona
+					p.catalog-list__text Информационный сайт для туристов
+					button.catalog-list__btn.btn.btn--red 9 900 руб.
+			//- 2
+			li.catalog-list__item
+				.catalog-list__header
+					img(src="/images/Catalog/browser-icon.png", alt="browser-icon")
+				.catalog-list__wrapper
+					img(src="/images/Catalog/project-2.jpg", alt="Pink App")
+				.catalog-list__desc
+					h3.catalog-list__head Pink App
+					p.catalog-list__text Продуктовый лендинг приложения для iOS и Android
+					button.catalog-list__btn.btn.btn--red 9 900 руб.
+			//- 3
+			li.catalog-list__item
+				.catalog-list__header
+					img(src="/images/Catalog/browser-icon.png", alt="browser-icon")
+				.catalog-list__wrapper
+					img(src="/images/Catalog/project-3.jpg", alt="Barbershop")
+				.catalog-list__desc
+					h3.catalog-list__head Barbershop
+					p.catalog-list__text Сайт салона красоты. Для мужчин, да.
+					button.catalog-list__btn.btn.btn--red 9 900 руб.
+			//- 4
+			li.catalog-list__item
+				.catalog-list__header
+					img(src="/images/Catalog/browser-icon.png", alt="browser-icon")
+				.catalog-list__wrapper
+					img(src="/images/Catalog/project-4.jpg", alt="MISHKA")
+				.catalog-list__desc
+					h3.catalog-list__head MISHKA
+					p.catalog-list__text Интернет-магазин вязаных игрушек
+					button.catalog-list__btn.btn.btn--red 9 900 руб.
+			//- 5
+			li.catalog-list__item
+				.catalog-list__header
+					img(src="/images/Catalog/browser-icon.png", alt="browser-icon")
+				.catalog-list__wrapper
+					img(src="/images/Catalog/project-5.jpg", alt="A Plus")
+				.catalog-list__desc
+					h3.catalog-list__head A Plus
+					p.catalog-list__text Лендинг курсов повышения квалификации
+					button.catalog-list__btn.btn.btn--red 9 900 руб.
+			//- 6
+			li.catalog-list__item
+				.catalog-list__header
+					img(src="/images/Catalog/browser-icon.png", alt="browser-icon")
+				.catalog-list__wrapper
+					img(src="/images/Catalog/project-6.jpg", alt="КВАСТ")
+				.catalog-list__desc
+					h3.catalog-list__head КВАСТ
+					p.catalog-list__text Промо-сайт производителя крафтового кваса
+					button.catalog-list__btn.btn.btn--red 9 900 руб.
+
+		//- Пагинация
+		ul.pagination
+			li.pagination__item
+				a.pagination__link.pagination__link-current(href="") 1
+			li.pagination__item
+				a.pagination__link(href="") 2
+			li.pagination__item
+				a.pagination__link(href="") 3
+			li.pagination__item
+				a.pagination__link(href="") следующая
