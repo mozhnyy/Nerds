@@ -1,19 +1,16 @@
 .catalog {
-	display: flex;
-	justify-content: space-between;
-	flex-direction: row;
 	padding-top: 55px;
 	padding-bottom: 60px;
+	display: grid;
+	@media (min-width: $lg) {
+		grid-template-columns: 260px 758px;
+	}
 	.catalog-filters {
-		max-width: 260px;
-		width: 100%;
-		margin-right: 20px;
-
 		.catalog-form {
-			display: flex;
-			justify-content: space-between;
-			flex-wrap: wrap;
-
+			& > * {
+				max-width: 260px;
+				width: 100%;
+			}
 			.catalog-form__fieldset {
 				margin-bottom: 50px;
 				width: 100%;
@@ -115,31 +112,15 @@
 	}
 
 	.catalog-content {
-		max-width: 760px;
-		width: 100%;
 		.catalog-header {
-			display: flex;
-			justify-content: space-between;
 			.catalog-header__title {
 				font-size: 18px;
 				font-weight: 700;
 				line-height: 30px;
 			}
 			.catalog-types-list {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				max-width: 346px;
-				width: 100%;
 			}
 			.catalog-types__item {
-				&:last-child {
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
-					max-width: 38px;
-					width: 100%;
-				}
 			}
 			.catalog-types__link {
 				text-transform: uppercase;
@@ -171,12 +152,6 @@
 		.catalog-list {
 			padding-top: 48px;
 			padding-bottom: 55px;
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			align-items: center;
-			width: 100%;
-			flex-basis: 48%;
 
 			.catalog-list__item {
 				position: relative;

@@ -1,7 +1,6 @@
 /* ==============================
 FOOTER
  ================================ */
-$transition: 0.3s all ease;
 .footer {
 	&-bottom {
 		@include fluid(
@@ -66,7 +65,13 @@ $transition: 0.3s all ease;
 		align-items: center;
 		border-radius: 50%;
 		transition: $transition;
-		background-color: #e74246;
+		background: linear-gradient(0deg, #e1e1e1, #e1e1e1), #ffffff;
+		&:hover {
+			background: linear-gradient(0deg, #e74246, #e74246), #ffffff;
+		}
+		&:active path {
+			opacity: 0.3;
+		}
 		path {
 			fill: #fff;
 			transition: $transition;
