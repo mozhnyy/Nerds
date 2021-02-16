@@ -1,45 +1,31 @@
 
 header.header
+	// Navigation
 	nav.nav.container
-		a.logo(href="#")
+		// Logo
+		a.logo
 			img(src="images/Header/nerds-logo.svg", alt="Nerds")
 
-		button.hamburger.hamburger--elastic
+		// Bugger
+		button.hamburger.hamburger--elastic(aria-label='Mobile burger')
 			span.hamburger-box
 				span.hamburger-inner
+
+		//
 		.header__wrapper
+
+			// Menu
 			ul.menu
 				li.menu__item
-					a.menu__link.menu__link-current(href="#") Студия
+					a.menu__link.menu__link--current(href="#") Студия
 				li.menu__item
 					a.menu__link(href="#") Клиенты
 				li.menu__item
 					a.menu__link(href="catalog.html") Магазин
 				li.menu__item
 					a.menu__link(href="#") Контакты
-			ul.menu.menu__user
-				li.menu__item
-					a.menu__link(href="#")
-						img.basket__img(src="images/Header/cart-icon.svg", alt="basket")
-						| Корзина
-	.header__slider.container
-		ul.slider
-			li.slider__item
-				h2.slider__title Долго, дорого, скрупулезно.
-				p.slider__text Математически выверенный дизайн для вашего сайта или мобильного приложения.
-				button.slider__btn.btn.btn--red УЗНАТЬ БОЛЬШЕ
-			li.slider__item
-				h2.slider__title Любим математику как никто другой
-				p.slider__text Никакого креатива, только математические формулы для расчета идеальных пропорций
-				button.slider__btn.btn.btn--red УЗНАТЬ БОЛЬШЕ
-			li.slider__item
-				h2.slider__title Только ночь, только хардкор
-				p.slider__text Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.
-				button.slider__btn.btn.btn--red УЗНАТЬ БОЛЬШЕ
-		ul.slider-controls
-			li.slider-controls__item
-				button.slider-controls__btn.slider-controls__btn-current
-			li.slider-controls__item
-				button.slider-controls__btn
-			li.slider-controls__item
-				button.slider-controls__btn
+
+			// User
+			ul.menu-user
+				li.menu-user__item
+					a.menu-user__link.menu__link(href="#") Корзина

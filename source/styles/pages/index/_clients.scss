@@ -2,10 +2,24 @@
 	padding: 45px 20px;
 	border-bottom: 2px solid #eee;
 	&-list {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-	&-list__item {
+		display: grid;
+		grid-row-gap: 20px;
+		justify-items: center;
+		@media (min-width: $sm) {
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 20px;
+		}
+		@media (min-width: $md) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+		&__item {
+			min-height: 90px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		&__link {
+			display: block;
+		}
 	}
 }

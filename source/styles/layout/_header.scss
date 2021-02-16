@@ -69,17 +69,26 @@ HEADER
 			justify-content: space-between;
 			margin-bottom: 9px;
 		}
-		&__user {
+		&-user {
 			@media (min-width: $lg) {
 				max-width: 116px;
 				width: 100%;
 			}
+			&__link {
+				position: relative;
+			}
+			&__link:before {
+				position: absolute;
+				content: "";
+				display: block;
+				width: 15px;
+				height: 15px;
+				background-image: url("../images/Header/cart-icon.png");
+				top: 50%;
+				transform: translateY(-50%);
+				left: -20px;
+			}
 		}
-		// &__item {
-		// 	&:not(:last-child) {
-		// 		margin-right: 45px;
-		// 	}
-		// }
 
 		&__link {
 			display: block;
@@ -114,122 +123,119 @@ HEADER
 				}
 			}
 		}
-
-		.basket__img {
-			margin-right: 25px;
-		}
-	}
-
-	.header__slider {
-		position: relative;
-		overflow: hidden;
-		padding-left: 0;
-		padding-right: 0;
-		.slider {
-			width: 300%;
-			height: 100%;
-			display: flex;
-			transition: all 0.3s ease;
-			&__item {
-				flex-basis: 100%;
-				padding: 80px 0;
-				text-align: center;
-				overflow: hidden;
-				@media (min-width: $lg) {
-					text-align: left;
-					&:nth-child(1) {
-						background: #eee
-							url("../images/Header/nerds-index-slide1.png")
-							no-repeat right bottom;
-						background-size: 70%;
-					}
-
-					&:nth-child(2) {
-						background: #eee
-							url("../images/Header/nerds-index-slide2.png")
-							no-repeat right bottom;
-						background-size: 70%;
-					}
-
-					&:nth-child(3) {
-						background: #eee
-							url("../images/Header/nerds-index-slide3.png")
-							no-repeat right bottom;
-						background-size: 70%;
-					}
-				}
-			}
-
-			&__title {
-				@include fluidFontSize(25px, 55px, 320px, 992px, 25px);
-				@include fluid(
-					"line-height",
-					(
-						320px: 24px,
-						992px: 55px,
-					)
-				);
-				font-weight: 500;
-				max-width: 400px;
-				width: 100%;
-				margin: auto;
-				margin-bottom: 28px;
-				@media (min-width: $lg) {
-					text-align: left;
-					margin: 0;
-					margin-bottom: 28px;
-				}
-			}
-			&__text {
-				max-width: 400px;
-				width: 100%;
-				margin: auto;
-				margin-bottom: 38px;
-				@media (min-width: $lg) {
-					text-align: left;
-					margin: 0;
-					margin-bottom: 28px;
-				}
-			}
-			&__btn {
-				max-width: 240px;
-				width: 100%;
-			}
-			&-controls {
-				position: absolute;
-				bottom: 40px;
-				left: 50%;
-				transform: translateX(-50%);
-				max-width: 88px;
-				width: 100%;
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-			}
-			&-controls__item {
-			}
-			&-controls__btn {
-				width: 18px;
-				height: 18px;
-				border-radius: 50%;
-				background-color: #fff;
-				position: relative;
-				outline: none;
-			}
-			&-controls__btn-current::after {
-				position: absolute;
-				content: "";
-				width: 8px;
-				height: 8px;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				border: 1px solid #c1c1c1;
-				border-radius: 50%;
-			}
-		}
 	}
 }
+
+// 	.header__slider {
+// 		position: relative;
+// 		overflow: hidden;
+// 		padding-left: 0;
+// 		padding-right: 0;
+// 		.slider {
+// 			width: 300%;
+// 			height: 100%;
+// 			display: flex;
+// 			transition: all 0.3s ease;
+// 			&__item {
+// 				flex-basis: 100%;
+// 				padding: 80px 0;
+// 				text-align: center;
+// 				overflow: hidden;
+// 				@media (min-width: $lg) {
+// 					text-align: left;
+// 					&:nth-child(1) {
+// 						background: #eee
+// 							url("../images/Header/nerds-index-slide1.png")
+// 							no-repeat right bottom;
+// 						background-size: 70%;
+// 					}
+
+// 					&:nth-child(2) {
+// 						background: #eee
+// 							url("../images/Header/nerds-index-slide2.png")
+// 							no-repeat right bottom;
+// 						background-size: 70%;
+// 					}
+
+// 					&:nth-child(3) {
+// 						background: #eee
+// 							url("../images/Header/nerds-index-slide3.png")
+// 							no-repeat right bottom;
+// 						background-size: 70%;
+// 					}
+// 				}
+// 			}
+
+// 			&__title {
+// 				@include fluidFontSize(25px, 55px, 320px, 992px, 25px);
+// 				@include fluid(
+// 					"line-height",
+// 					(
+// 						320px: 24px,
+// 						992px: 55px,
+// 					)
+// 				);
+// 				font-weight: 500;
+// 				max-width: 400px;
+// 				width: 100%;
+// 				margin: auto;
+// 				margin-bottom: 28px;
+// 				@media (min-width: $lg) {
+// 					text-align: left;
+// 					margin: 0;
+// 					margin-bottom: 28px;
+// 				}
+// 			}
+// 			&__text {
+// 				max-width: 400px;
+// 				width: 100%;
+// 				margin: auto;
+// 				margin-bottom: 38px;
+// 				@media (min-width: $lg) {
+// 					text-align: left;
+// 					margin: 0;
+// 					margin-bottom: 28px;
+// 				}
+// 			}
+// 			&__btn {
+// 				max-width: 240px;
+// 				width: 100%;
+// 			}
+// 			&-controls {
+// 				position: absolute;
+// 				bottom: 40px;
+// 				left: 50%;
+// 				transform: translateX(-50%);
+// 				max-width: 88px;
+// 				width: 100%;
+// 				display: flex;
+// 				justify-content: space-between;
+// 				align-items: center;
+// 			}
+// 			&-controls__item {
+// 			}
+// 			&-controls__btn {
+// 				width: 18px;
+// 				height: 18px;
+// 				border-radius: 50%;
+// 				background-color: #fff;
+// 				position: relative;
+// 				outline: none;
+// 			}
+// 			&-controls__btn-current::after {
+// 				position: absolute;
+// 				content: "";
+// 				width: 8px;
+// 				height: 8px;
+// 				top: 50%;
+// 				left: 50%;
+// 				transform: translate(-50%, -50%);
+// 				border: 1px solid #c1c1c1;
+// 				border-radius: 50%;
+// 			}
+// 		}
+// 	}
+// }
 
 // CATALOG HEADER
 .header-bottom__title {
