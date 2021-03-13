@@ -33,3 +33,34 @@ if (document.body.classList.contains("index-body")) {
 	// Вызов слайдера
 	headerSlider;
 }
+
+const uiSlider = document.querySelector("#slider");
+if (uiSlider) {
+	noUiSlider.create(uiSlider, {
+		start: [0, 3000],
+		connect: true,
+		range: {
+			min: 0,
+			max: 5000,
+		},
+	});
+	const inputNumberStart = document.querySelector(".range__input--start");
+	const inputNumberEnd = document.querySelector(".range__input--end");
+
+	uiSlider.noUiSlider.on("update", function (values, handle) {
+		var value = values[handle];
+
+		if (handle) {
+			inputNumberEnd.value = Math.round(value);
+		} else {
+			inputNumberStart.value = Math.round(value);
+		}
+	});
+
+	inputNumberStart.addEventListener("change", function () {
+		uiSlider.noUiSlider.set([null, this.value]);
+	});
+	inputNumberEnd.addEventListener("change", function () {
+		uiSlider.noUiSlider.set([null, this.value]);
+	});
+}

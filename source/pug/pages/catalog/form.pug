@@ -1,53 +1,53 @@
+section.page-title
+	h1.page-title__head.container Магазин готовых шаблонов
+
+
+
 section.catalog.container
 	// Блок фильтров
-	.catalog-filters
-		form.catalog-form
+	form.catalog-form
 
-			fieldset.catalog-form__fieldset
-				legend.catalog-form__legend СТОИМОСТЬ:
-				.range-filter
-					.range-controls
-						.scale
-							.bar
-						.toggle.toggle-min
-						.toggle.toggle-max
-					.price-controls
-						label.price-controls__label.min-price от
-							input(name="min-price" type="text" value="0")
-						label.price-controls__label.max-price до
-							input(name="max-price" type="text" value="15000")
+		fieldset.catalog-form__fieldset
+			legend.catalog-form__legend#legend--range СТОИМОСТЬ:
+			#slider
+			.slider-inner
+			.price-controls
+				label.price-controls__label.min-price от
+					input.range__input--start(name="min-price" type="text" value="0")
+				label.price-controls__label.max-price до
+					input.range__input--end(name="max-price" type="text" value="15000")
 
-			fieldset.catalog-form__fieldset
-				legend.catalog-form__legend СЕТКА:
-				.catalog-form__group
-					input.catalog-form__radio(type="radio" name="grid" id="responsive")
-					label.catalog-form__label(for="responsive") Адаптивная
-				.catalog-form__group
-					input.catalog-form__radio(type="radio" name="grid" id="fixed")
-					label.catalog-form__label(for="fixed") Фиксированная
-				.catalog-form__group
-					input.catalog-form__radio(type="radio" name="grid" id="rubber")
-					label.catalog-form__label(for="rubber") Резиновая
+		fieldset.catalog-form__fieldset
+			legend.catalog-form__legend СЕТКА:
+			.catalog-form__group
+				input.catalog-form__radio.visually-hidden(type="radio" name="grid" id="responsive" value="responsive")
+				label.catalog-form__label.label--radio(for="responsive") Адаптивная
+			.catalog-form__group
+				input.catalog-form__radio.visually-hidden(type="radio" name="grid" id="fixed" value="fixed")
+				label.catalog-form__label.label--radio(for="fixed") Фиксированная
+			.catalog-form__group
+				input.catalog-form__radio.visually-hidden(type="radio" name="grid" id="rubber" value="rubber")
+				label.catalog-form__label.label--radio(for="rubber") Резиновая
 
-			fieldset.catalog-form__fieldset
-				legend.catalog-form__legend ОСОБЕННОСТИ:
-				.catalog-form__group
-					input.catalog-form__checkbox(type="checkbox" name="grid" id="slider" checked)
-					label.catalog-form__label(for="slider") Слайдер
-				.catalog-form__group
-					input.catalog-form__checkbox(type="checkbox" name="grid" id="advantages-block")
-					label.catalog-form__label(for="advantages-block") Блок преимуществ
-				.catalog-form__group
-					input.catalog-form__checkbox(type="checkbox" name="grid" id="news" checked)
-					label.catalog-form__label(for="news") Новости
-				.catalog-form__group
-					input.catalog-form__checkbox(type="checkbox" name="grid" id="gallery")
-					label.catalog-form__label(for="gallery") Галерея
-				.catalog-form__group
-					input.catalog-form__checkbox(type="checkbox" name="grid" id="cart")
-					label.catalog-form__label(for="cart") Корзина
+		fieldset.catalog-form__fieldset
+			legend.catalog-form__legend ОСОБЕННОСТИ:
+			.catalog-form__group
+				input.catalog-form__checkbox.visually-hidden(type="checkbox" name="grid" id="slider" checked)
+				label.catalog-form__label.label--checkbox(for="slider") Слайдер
+			.catalog-form__group
+				input.catalog-form__checkbox.visually-hidden(type="checkbox" name="grid" id="advantages-block")
+				label.catalog-form__label.label--checkbox(for="advantages-block") Блок преимуществ
+			.catalog-form__group
+				input.catalog-form__checkbox.visually-hidden(type="checkbox" name="grid" id="news" checked)
+				label.catalog-form__label.label--checkbox(for="news") Новости
+			.catalog-form__group
+				input.catalog-form__checkbox.visually-hidden(type="checkbox" name="grid" id="gallery")
+				label.catalog-form__label.label--checkbox(for="gallery") Галерея
+			.catalog-form__group
+				input.catalog-form__checkbox.visually-hidden(type="checkbox" name="grid" id="cart")
+				label.catalog-form__label.label--checkbox(for="cart") Корзина
 
-			button.catalog-form__btn.btn Показать
+		button.catalog-form__btn.btn Показать
 
 	// Блок с контентом
 	.catalog-content
@@ -61,7 +61,7 @@ section.catalog.container
 					a.catalog-types__link(href="") По типу
 				li.catalog-types__item
 					a.catalog-types__link(href="") По названию
-				li.catalog-types__item
+				li.catalog-types__item.catalog-types__item--dir
 					a.catalog-types__dir.catalog-types__dir-up.catalog-types__dir-current(href="")
 					a.catalog-types__dir.catalog-types__dir-down(href="")
 

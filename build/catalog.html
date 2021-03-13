@@ -35,71 +35,65 @@
     </header>
     <!-- Main-->
     <main class="main">
+      <section class="page-title">
+        <h1 class="page-title__head container">Магазин готовых шаблонов</h1>
+      </section>
       <section class="catalog container">
         <!-- Блок фильтров-->
-        <div class="catalog-filters">
-          <form class="catalog-form">
-            <fieldset class="catalog-form__fieldset">
-              <legend class="catalog-form__legend">СТОИМОСТЬ:</legend>
-              <div class="range-filter">
-                <div class="range-controls">
-                  <div class="scale">
-                    <div class="bar"></div>
-                  </div>
-                  <div class="toggle toggle-min"></div>
-                  <div class="toggle toggle-max"></div>
-                </div>
-                <div class="price-controls">
-                  <label class="price-controls__label min-price">от
-                    <input name="min-price" type="text" value="0">
-                  </label>
-                  <label class="price-controls__label max-price">до
-                    <input name="max-price" type="text" value="15000">
-                  </label>
-                </div>
-              </div>
-            </fieldset>
-            <fieldset class="catalog-form__fieldset">
-              <legend class="catalog-form__legend">СЕТКА:</legend>
-              <div class="catalog-form__group">
-                <input class="catalog-form__radio" type="radio" name="grid" id="responsive">
-                <label class="catalog-form__label" for="responsive">Адаптивная</label>
-              </div>
-              <div class="catalog-form__group">
-                <input class="catalog-form__radio" type="radio" name="grid" id="fixed">
-                <label class="catalog-form__label" for="fixed">Фиксированная</label>
-              </div>
-              <div class="catalog-form__group">
-                <input class="catalog-form__radio" type="radio" name="grid" id="rubber">
-                <label class="catalog-form__label" for="rubber">Резиновая</label>
-              </div>
-            </fieldset>
-            <fieldset class="catalog-form__fieldset">
-              <legend class="catalog-form__legend">ОСОБЕННОСТИ:</legend>
-              <div class="catalog-form__group">
-                <input class="catalog-form__checkbox" type="checkbox" name="grid" id="slider" checked>
-                <label class="catalog-form__label" for="slider">Слайдер</label>
-              </div>
-              <div class="catalog-form__group">
-                <input class="catalog-form__checkbox" type="checkbox" name="grid" id="advantages-block">
-                <label class="catalog-form__label" for="advantages-block">Блок преимуществ</label>
-              </div>
-              <div class="catalog-form__group">
-                <input class="catalog-form__checkbox" type="checkbox" name="grid" id="news" checked>
-                <label class="catalog-form__label" for="news">Новости</label>
-              </div>
-              <div class="catalog-form__group">
-                <input class="catalog-form__checkbox" type="checkbox" name="grid" id="gallery">
-                <label class="catalog-form__label" for="gallery">Галерея</label>
-              </div>
-              <div class="catalog-form__group">
-                <input class="catalog-form__checkbox" type="checkbox" name="grid" id="cart">
-                <label class="catalog-form__label" for="cart">Корзина</label>
-              </div>
-            </fieldset>
-            <button class="catalog-form__btn btn">Показать</button>
-          </form>
-        </div>
+        <form class="catalog-form">
+          <fieldset class="catalog-form__fieldset">
+            <legend class="catalog-form__legend" id="legend--range">СТОИМОСТЬ:</legend>
+            <div id="slider"></div>
+            <div class="slider-inner"></div>
+            <div class="price-controls">
+              <label class="price-controls__label min-price">от
+                <input class="range__input--start" name="min-price" type="text" value="0">
+              </label>
+              <label class="price-controls__label max-price">до
+                <input class="range__input--end" name="max-price" type="text" value="15000">
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="catalog-form__fieldset">
+            <legend class="catalog-form__legend">СЕТКА:</legend>
+            <div class="catalog-form__group">
+              <input class="catalog-form__radio visually-hidden" type="radio" name="grid" id="responsive" value="responsive">
+              <label class="catalog-form__label label--radio" for="responsive">Адаптивная</label>
+            </div>
+            <div class="catalog-form__group">
+              <input class="catalog-form__radio visually-hidden" type="radio" name="grid" id="fixed" value="fixed">
+              <label class="catalog-form__label label--radio" for="fixed">Фиксированная</label>
+            </div>
+            <div class="catalog-form__group">
+              <input class="catalog-form__radio visually-hidden" type="radio" name="grid" id="rubber" value="rubber">
+              <label class="catalog-form__label label--radio" for="rubber">Резиновая</label>
+            </div>
+          </fieldset>
+          <fieldset class="catalog-form__fieldset">
+            <legend class="catalog-form__legend">ОСОБЕННОСТИ:</legend>
+            <div class="catalog-form__group">
+              <input class="catalog-form__checkbox visually-hidden" type="checkbox" name="grid" id="slider" checked>
+              <label class="catalog-form__label label--checkbox" for="slider">Слайдер</label>
+            </div>
+            <div class="catalog-form__group">
+              <input class="catalog-form__checkbox visually-hidden" type="checkbox" name="grid" id="advantages-block">
+              <label class="catalog-form__label label--checkbox" for="advantages-block">Блок преимуществ</label>
+            </div>
+            <div class="catalog-form__group">
+              <input class="catalog-form__checkbox visually-hidden" type="checkbox" name="grid" id="news" checked>
+              <label class="catalog-form__label label--checkbox" for="news">Новости</label>
+            </div>
+            <div class="catalog-form__group">
+              <input class="catalog-form__checkbox visually-hidden" type="checkbox" name="grid" id="gallery">
+              <label class="catalog-form__label label--checkbox" for="gallery">Галерея</label>
+            </div>
+            <div class="catalog-form__group">
+              <input class="catalog-form__checkbox visually-hidden" type="checkbox" name="grid" id="cart">
+              <label class="catalog-form__label label--checkbox" for="cart">Корзина</label>
+            </div>
+          </fieldset>
+          <button class="catalog-form__btn btn">Показать</button>
+        </form>
         <!-- Блок с контентом-->
         <div class="catalog-content">
           <!-- Шапка с фильтрами-->
@@ -109,7 +103,7 @@
               <li class="catalog-types__item"><a class="catalog-types__link catalog-types__link-current" href="">По цене</a></li>
               <li class="catalog-types__item"><a class="catalog-types__link" href="">По типу</a></li>
               <li class="catalog-types__item"><a class="catalog-types__link" href="">По названию</a></li>
-              <li class="catalog-types__item"><a class="catalog-types__dir catalog-types__dir-up catalog-types__dir-current" href=""></a><a class="catalog-types__dir catalog-types__dir-down" href=""></a></li>
+              <li class="catalog-types__item catalog-types__item--dir"><a class="catalog-types__dir catalog-types__dir-up catalog-types__dir-current" href=""></a><a class="catalog-types__dir catalog-types__dir-down" href=""></a></li>
             </ul>
           </div>
           <div class="catalog-list">

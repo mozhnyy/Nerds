@@ -17,6 +17,7 @@ module.exports = function () {
 			.src([
 				scriptsPATH.input + "/vendors/jquery-3.3.1.min.js",
 				scriptsPATH.input + "/vendors/slick.min.js",
+				scriptsPATH.input + "/vendors/nouislider.min.js",
 			])
 			.pipe(concat("libs.min.js"))
 			.pipe($.gulp.dest(scriptsPATH.output));
