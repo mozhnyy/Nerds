@@ -1,6 +1,17 @@
 footer.footer
 	// Top
-	section.footer-top.footer-contacts
+	section.footer-top.contacts
+		.map#map
+		.container
+			.contacts__info
+				h3.contacts__head NЁRDS DESIGN STUDIO
+				p.contacts__address
+					span 191186, Санкт-Петербург,
+					span ул. Б. Конюшенная, д. 19/8
+				p.contacts__phone тел.
+					a.contacts__tel(href="tel:+7(812)275-75-75") +7 (812) 275-75-75
+				a.contacts__btn.btn.btn--red(href="") Напишите нам
+
 
 	// Bottom
 	section.footer-bottom.container
@@ -19,3 +30,22 @@ footer.footer
 		p.footer-discount
 			span.footer-discount__title Давайте дружить, это выгодно!
 			| Скидка 10% для друзей из социальных сетей.
+
+
+.overlay
+	.modal
+		.modal__header
+			h2.modal__head Напишите нам
+			button.modal__exit &times;
+		.modal-form
+			.modal-form__group
+				p.modal-form__field
+					label.modal-form__label(for="name") Ваше имя:
+					input.modal-form__input(type="text" id="name" placeholder="Имя Фамилия")
+				p.modal-form__field
+					label.modal-form__label(for="mail") Ваш e-mail:
+					input.modal-form__input(type="text" id="mail" placeholder="email@example.com")
+			p.modal-form__field.modal-form__field--textarea
+				label.modal-form__label(for="message") Текст письма:
+				textarea.modal-form__input.modal-form__input--textarea(id="message" placeholder="В свободной форме")
+			button.modal-form__btn.btn.btn--red ОТПРАВИТЬ

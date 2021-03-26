@@ -1,0 +1,31 @@
+
+header.header
+	// Navigation
+	nav.nav.container
+		// Logo
+		a.logo(href="index.html")
+			img(src="images/Header/nerds-logo.svg", alt="Nerds")
+
+		// Bugger
+		button.hamburger.hamburger--elastic(aria-label='Mobile burger')
+			span.hamburger-box
+				span.hamburger-inner
+
+		//
+		.header__wrapper
+
+			// Menu
+			ul.menu
+				li.menu__item
+					a.menu__link(href="index.html") Студия
+				li.menu__item
+					a.menu__link(href="index.html") Клиенты
+				li.menu__item
+					a.menu__link.menu__link--current(href="catalog.html") Магазин
+				li.menu__item
+					a.menu__link(href="index.html") Контакты
+
+			// User
+			ul.menu-user
+				li.menu-user__item
+					a.menu-user__link.menu__link(href="#") Корзина

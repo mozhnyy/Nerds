@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Nerds</title><!--[if IE]>
@@ -9,22 +9,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="img/png" href="images/favicon.png">
   </head>
-  <body>
-    <!-- Header-->
+  <body class="catalog-body">
     <header class="header">
       <!-- Navigation-->
       <nav class="nav container">
-        <!-- Logo--><a class="logo"><img src="images/Header/nerds-logo.svg" alt="Nerds"></a>
+        <!-- Logo--><a class="logo" href="index.html"><img src="images/Header/nerds-logo.svg" alt="Nerds"></a>
         <!-- Bugger-->
         <button class="hamburger hamburger--elastic" aria-label="Mobile burger"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
         <!---->
         <div class="header__wrapper">
           <!-- Menu-->
           <ul class="menu">
-            <li class="menu__item"><a class="menu__link menu__link--current" href="#">Студия</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Клиенты</a></li>
-            <li class="menu__item"><a class="menu__link" href="catalog.html">Магазин</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+            <li class="menu__item"><a class="menu__link" href="index.html">Студия</a></li>
+            <li class="menu__item"><a class="menu__link" href="index.html">Клиенты</a></li>
+            <li class="menu__item"><a class="menu__link menu__link--current" href="catalog.html">Магазин</a></li>
+            <li class="menu__item"><a class="menu__link" href="index.html">Контакты</a></li>
           </ul>
           <!-- User-->
           <ul class="menu-user">
@@ -33,7 +32,6 @@
         </div>
       </nav>
     </header>
-    <!-- Main-->
     <main class="main">
       <section class="page-title">
         <h1 class="page-title__head container">Магазин готовых шаблонов</h1>
@@ -43,8 +41,9 @@
         <form class="catalog-form">
           <fieldset class="catalog-form__fieldset">
             <legend class="catalog-form__legend" id="legend--range">СТОИМОСТЬ:</legend>
-            <div id="slider"></div>
-            <div class="slider-inner"></div>
+            <div class="slider-wrapper">
+              <div id="slider"></div>
+            </div>
             <div class="price-controls">
               <label class="price-controls__label min-price">от
                 <input class="range__input--start" name="min-price" type="text" value="0">
@@ -178,10 +177,18 @@
         </div>
       </section>
     </main>
-    <!-- Footer-->
     <footer class="footer">
       <!-- Top-->
-      <section class="footer-top footer-contacts"></section>
+      <section class="footer-top contacts">
+        <div class="map" id="map"></div>
+        <div class="container">
+          <div class="contacts__info">
+            <h3 class="contacts__head">NЁRDS DESIGN STUDIO</h3>
+            <p class="contacts__address"><span>191186, Санкт-Петербург,</span><span>ул. Б. Конюшенная, д. 19/8</span></p>
+            <p class="contacts__phone">тел.<a class="contacts__tel" href="tel:+7(812)275-75-75">+7 (812) 275-75-75</a></p><a class="contacts__btn btn btn--red" href="">Напишите нам</a>
+          </div>
+        </div>
+      </section>
       <!-- Bottom-->
       <section class="footer-bottom container">
         <!-- Social-->
@@ -193,8 +200,33 @@
         <p class="footer-discount"><span class="footer-discount__title">Давайте дружить, это выгодно!</span>Скидка 10% для друзей из социальных сетей.</p>
       </section>
     </footer>
-    <!-- Script-->
+    <div class="overlay">
+      <div class="modal">
+        <div class="modal__header">
+          <h2 class="modal__head">Напишите нам</h2>
+          <button class="modal__exit">&times;</button>
+        </div>
+        <div class="modal-form">
+          <div class="modal-form__group">
+            <p class="modal-form__field">
+              <label class="modal-form__label" for="name">Ваше имя:</label>
+              <input class="modal-form__input" type="text" id="name" placeholder="Имя Фамилия">
+            </p>
+            <p class="modal-form__field">
+              <label class="modal-form__label" for="mail">Ваш e-mail:</label>
+              <input class="modal-form__input" type="text" id="mail" placeholder="email@example.com">
+            </p>
+          </div>
+          <p class="modal-form__field modal-form__field--textarea">
+            <label class="modal-form__label" for="message">Текст письма:</label>
+            <textarea class="modal-form__input modal-form__input--textarea" id="message" placeholder="В свободной форме"></textarea>
+          </p>
+          <button class="modal-form__btn btn btn--red">ОТПРАВИТЬ</button>
+        </div>
+      </div>
+    </div>
     <script src="js/libs.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

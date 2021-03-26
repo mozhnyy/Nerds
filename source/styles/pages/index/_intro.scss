@@ -4,4 +4,98 @@ Intro
 .intro {
 	min-height: 431px;
 	background: #eeeeee;
+	overflow-x: hidden;
+	position: relative;
+}
+
+.slider {
+	width: 300%;
+	display: flex;
+	&-wrapper {
+		overflow-x: hidden;
+	}
+	&__item {
+		width: 100%;
+		background: url("../images/Intro/nerds-index-slide1-1.png") no-repeat
+			right;
+		&-2 {
+			background: url("../images/Intro/nerds-index-slide2-1.png")
+				no-repeat right;
+		}
+		&-3 {
+			background: url("../images/Intro/nerds-index-slide3-1.png")
+				no-repeat right;
+		}
+	}
+	&__title {
+		padding-top: 78px;
+		padding-bottom: 25px;
+		max-width: 538px;
+		width: 100%;
+		font-size: 55px;
+		line-height: 55px;
+		font-weight: 500;
+		@media (max-width: $md) {
+			font-size: 33px;
+			line-height: 33px;
+		}
+	}
+	&__text {
+		padding-bottom: 38px;
+		max-width: 400px;
+		width: 100%;
+	}
+	&__btn {
+		margin-bottom: 80px;
+	}
+}
+
+.slider-controls {
+	position: absolute;
+	content: "";
+	bottom: 40px;
+	bottom: 4rem;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	max-width: 88px;
+	max-width: 8.8rem;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+
+.slider-controls__btn {
+	width: 18px;
+	width: 1.8rem;
+	height: 18px;
+	height: 1.8rem;
+	border-radius: 50%;
+	background-color: #fff;
+	position: relative;
+	outline: none;
+}
+
+.slider-controls__btn-current:after {
+	position: absolute;
+	content: "";
+	width: 8px;
+	width: 0.8rem;
+	height: 8px;
+	height: 0.8rem;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	border: 1px solid #c1c1c1;
+	border: 0.1rem solid #c1c1c1;
+	border-radius: 50%;
 }

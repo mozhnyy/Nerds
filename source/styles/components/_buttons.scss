@@ -15,13 +15,40 @@ BUTTON STYLES
 	color: #ffffff;
 	font-weight: 500;
 	text-align: center;
+	&:active {
+		color: rgba(255, 255, 255, 0.3);
+	}
 	&.btn--red {
 		background: #fb565a;
+		&:hover,
+		&.focus {
+			background: #e74246;
+			transition: all 0.3s ease;
+		}
+		&:active {
+			background: #d7373b;
+		}
 	}
 	&.btn--green {
 		background: #00ca74;
+		&:hover,
+		&.focus {
+			background: #00bc6c;
+			transition: all 0.3s ease;
+		}
+		&:active {
+			background: #00aa62;
+		}
 	}
 	&.btn--yellow {
 		background: #efc849;
+		&:hover,
+		&.focus {
+			background: #eab534;
+			transition: all 0.3s ease;
+		}
+		&:active {
+			background: #e5a722;
+		}
 	}
 }

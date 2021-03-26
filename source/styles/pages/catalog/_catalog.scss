@@ -216,8 +216,10 @@
 				text-transform: uppercase;
 				font-size: 14px;
 				line-height: 18px;
+				color: rgba(0, 0, 0, 0.3);
 			}
 			.catalog-types__link-current {
+				color: #000;
 			}
 			.catalog-types__dir {
 				background-color: rgba(0, 0, 0, 0.3);
@@ -349,15 +351,17 @@
 		display: block;
 	}
 
-	.slider-inner {
-		min-height: 80px;
-		width: 100%;
+	.slider-wrapper {
+		padding-top: 25px;
+		padding-bottom: 15px;
 		background: #eeeeee;
 		border-radius: 3px;
-		margin-bottom: 14px;
-		position: absolute;
-		top: -20px;
-		z-index: -1;
+		padding-left: 18px;
+		padding-right: 20px;
+	}
+
+	#slider {
+		width: 205px;
 	}
 
 	#legend--range {
